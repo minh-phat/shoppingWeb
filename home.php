@@ -2,7 +2,7 @@
 	include('header.php');
 
 	session_start();
-    $_SESSION["page"] == "homePage";
+    $_SESSION['page'] = 'homePage';
 ?>
 
 	<!-- start banner Area -->

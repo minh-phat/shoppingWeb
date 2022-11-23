@@ -15,7 +15,7 @@
 						<div class="row single-slide align-items-center d-flex">
 							<div class="col-lg-5 col-md-6">
 								<div class="banner-content">
-									<h1>Nike New <?php echo $_SESSION["page"]; ?> <br>Collection!</h1>
+									<h1>Nike New <?php echo htmlspecialchars($_SESSION['page']) ?> <br>Collection!</h1>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
 										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
 									<div class="add-bag d-flex align-items-center">

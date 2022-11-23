@@ -1,5 +1,8 @@
 <?php
-	include('header.php')
+	include('header.php');
+
+	session_start();
+    $_SESSION["page"] == "homePage";
 ?>
 
 	<!-- start banner Area -->

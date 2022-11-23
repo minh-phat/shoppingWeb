@@ -1,3 +1,12 @@
+<?php
+
+    session_start();
+    if($_SESSION["page"] == "homePage"){
+        $_SESSION["menuCss"] = "active";
+    }else{$_SESSION["menuCss"] = "";}
+
+    
+?>
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 
@@ -50,7 +59,7 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="home.php">Home</a></li>
+							<li class="nav-item <?php echo $_SESSION["menuCss"];?>"><a class="nav-link" href="home.php">Home</a></li>
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Shop</a>

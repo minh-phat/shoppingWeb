@@ -1,9 +1,22 @@
 <?php
-
-    session_start();
-    if($_SESSION["page"] == "homePage"){
-        $_SESSION["menuCss"] = "active";
-    }else{$_SESSION["menuCss"] = "";}
+    if((isset($_SESSION["page"])) && ($_SESSION["page"] == "homePage")){
+        $_SESSION["menuCssHome"] = "active";
+        $_SESSION["menuCssIndex"] = "";
+    }elseif((isset($_SESSION["page"])) && ($_SESSION["page"] == "indexPage"))
+    {
+        $_SESSION["menuCssIndex"] = "active";
+        $_SESSION["menuCssHome"] = "";
+    }
+    elseif((isset($_SESSION["page"])) && ($_SESSION["page"] == "indexPage"))
+    {
+        $_SESSION["menuCssIndex"] = "active";
+        $_SESSION["menuCssHome"] = "";
+    }
+    elseif((isset($_SESSION["page"])) && ($_SESSION["page"] == "indexPage"))
+    {
+        $_SESSION["menuCssIndex"] = "active";
+        $_SESSION["menuCssHome"] = "";
+    }
 
     
 ?>
@@ -59,10 +72,10 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item <?php echo htmlspecialchars($_SESSION["menuCss"]);?>"><a class="nav-link" href="home.php">Home</a></li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Shop</a>
+							<li class="nav-item <?php echo htmlspecialchars($_SESSION["menuCssHome"]);?>"><a class="nav-link" href="home.php">Trang Chủ</a></li>
+                            <li class="nav-item <?php echo htmlspecialchars($_SESSION["menuCssIndex"]);?>"><a class="nav-link" href="Index.php">Sản Phẩm</a></li>
+							<!-- <li class="nav-item submenu dropdown">
+								<a href="index.php" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sản Phẩm</a>
 								<ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link" href="index.php">Shop Category</a></li>
 									<li class="nav-item"><a class="nav-link" href="single-product.html">Product Details</a></li>
@@ -70,7 +83,7 @@
 									<li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
 									<li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
 								</ul>
-							</li>
+							</li> -->
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Blog</a>

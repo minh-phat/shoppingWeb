@@ -1,5 +1,5 @@
 <?php
-  include('header.php')
+  include('header.php');
 ?>
         <div class="main-panel">
           <div class="content-wrapper">

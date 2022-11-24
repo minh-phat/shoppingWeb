@@ -41,17 +41,17 @@
 	<!--
 		CSS
 		============================================= -->
-	<link rel="stylesheet" href="css/linearicons.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/themify-icons.css">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/nice-select.css">
-	<link rel="stylesheet" href="css/nouislider.min.css">
-	<link rel="stylesheet" href="css/ion.rangeSlider.css" />
-	<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="../css/linearicons.css">
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/themify-icons.css">
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link rel="stylesheet" href="../css/owl.carousel.css">
+	<link rel="stylesheet" href="../css/nice-select.css">
+	<link rel="stylesheet" href="../css/nouislider.min.css">
+	<link rel="stylesheet" href="../css/ion.rangeSlider.css" />
+	<link rel="stylesheet" href="../css/ion.rangeSlider.skinFlat.css" />
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+	<link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
@@ -72,8 +72,8 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item <?php echo htmlspecialchars($_SESSION["menuCssHome"]);?>"><a class="nav-link" href="home.php">Trang Chủ</a></li>
-                            <li class="nav-item <?php echo htmlspecialchars($_SESSION["menuCssIndex"]);?>"><a class="nav-link" href="index.php">Sản Phẩm</a></li>
+							<li class="nav-item <?php echo htmlspecialchars($_SESSION["menuCssHome"]);?>"><a class="nav-link" href="../../../user/home.php">Trang Chủ</a></li>
+                            <li class="nav-item <?php echo htmlspecialchars($_SESSION["menuCssIndex"]);?>"><a class="nav-link" href="../../../index.php">Sản Phẩm</a></li>
 							<!-- <li class="nav-item submenu dropdown">
 								<a href="index.php" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sản Phẩm</a>
 								<ul class="dropdown-menu">

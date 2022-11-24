@@ -77,7 +77,7 @@
 						<ul class="nav navbar-nav menu_nav ml-auto">
 							<li class="nav-item <?php echo htmlspecialchars($_SESSION["menuCssHome"]);?>"><a class="nav-link" href="../../../user/home.php">Trang Chủ</a></li>
                             <li class="nav-item <?php echo htmlspecialchars($_SESSION["menuCssIndex"]);?>"><a class="nav-link" href="../../../index.php">Sản Phẩm</a></li>
-							<li class="nav-item <?php echo htmlspecialchars($_SESSION["menuCssLogin"]);?>"><a class="nav-link" href="../../../login.php">Đăng Nhập</a></li>
+							<li class="nav-item <?php echo htmlspecialchars($_SESSION["menuCssLogin"]);?>"><a class="nav-link" href="../../../user/login.php">Đăng Nhập</a></li>
 							<!-- <li class="nav-item submenu dropdown">
 								<a href="index.php" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sản Phẩm</a>
 								<ul class="dropdown-menu">

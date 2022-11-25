@@ -1,11 +1,6 @@
 
 <?php
 	session_start();
-
-
-	$_SESSION['url'] = 'http://localhost/shoppingWeb/';
-
-
 	$_SESSION['page'] = 'indexPage';
 	include('header.php');
 	

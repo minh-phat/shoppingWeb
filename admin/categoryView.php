@@ -14,16 +14,96 @@
                         <label for="exampleInputName1">Tên Thể Loại</label>
                         <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
                       </div>
-                      <div class="form-group">
-                        <label>Hình Ảnh</label>
-                        <input type="file" name="img[]" class="file-upload-default">
-                        <div class="input-group col-xs-12">
-                          <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
-                          <span class="input-group-append">
-                            <button class="file-upload-browse btn btn-info" type="button">Upload</button>
-                          </span>
+                      <!--  Image upload and preview -->
+                      <div class="form-group" style="height: auto;">
+                        <!-- <label for="image">Thêm Hình Ảnh</label>
+                        <div class="input-group col-xs-12"> -->
+                          <!-- multiple command use to add many picture by hold ctrl key anh select picture  -->
+                          <!-- <input type="file" name="image" id="file-input" class="default" onchange="loadFile(event)" multiple=""> 
                         </div>
-                      </div>
+                        <br>
+                        <h4>Ảnh Đã Thêm </h4>
+                        <img id="output" width="400px">
+                        <br> -->
+
+
+                        <!-- <script>
+                          //JS to preview image when uploaded 
+                          var loadFile = function (event) {
+                            var output = document.getElementById('output');
+                            output.src = URL.createObjectURL(event.target.files[0]);
+                            output.onload = function () {
+                                URL.revokeObjectURL(output.src) //Free memory
+                            }
+                          };
+                        </script> -->
+                        <!-- <script>
+                            function previewImages() {
+                                var preview = document.querySelector('#output');
+                                preview.innerHTML = '';     //clear previous previews
+                                //preview.style = "width:fit-content";    //change the preview <div> style to fit the new childs (images in this case)
+                                if (this.files) {
+                                    [].forEach.call(this.files, readAndPreview);
+                                }
+                                function readAndPreview(file) {
+                                    // Make sure `file.name` matches our extensions criteria
+                                    if (!/\.(jpe?g|png|gif)$/i.test(file.name)) {
+                                        return alert(file.name + " is not an image");
+                                    }
+                                    var reader = new FileReader();
+                                    reader.addEventListener("load", function() {
+                                        var image = new Image();
+                                        image.height = 210;
+                                        image.width = 210;
+                                        image.title = file.name;
+                                        //image.style = "border-radius: 10px; margin: 5px"    //image attributes
+                                        image.src = this.result;
+                                        preview.appendChild(image);
+                                    });
+                                    reader.readAsDataURL(file);
+                                }
+                            }
+                            document.querySelector('#file-input').addEventListener("change", previewImages);
+                        </script> -->
+                        <label for="images" class="form-label">Images</label>
+                            <input type="file" name="images[]" class="form-control <?php echo (!empty($ProductImage_err)) ? 'is-invalid' : ''; ?>" multiple="" style="width: 350px" id="file-input">
+                            <span class="invalid-feedback"><?php echo $ProductImage_err; ?></span>
+
+                            <br>
+                            <label for="preview">Previews</label>
+                            <div id="preview" style="width:300px;height:300px" class="form-control" ></div> <!--preview area-->
+                            <br>
+                            <!-- Script to preview multiple uploaded images -->
+
+                            <script>
+                                function previewImages() {
+                                    var preview = document.querySelector('#preview');
+                                    preview.innerHTML = '';     //clear previous previews
+                                    preview.style = "width:auto; height:auto;";    //change the preview <div> style to fit the new childs (images in this case)
+                                    if (this.files) {
+                                        [].forEach.call(this.files, readAndPreview);
+                                    }
+                                    function readAndPreview(file) {
+                                        // Make sure `file.name` matches our extensions criteria
+                                        if (!/\.(jpe?g|png|gif)$/i.test(file.name)) {
+                                            return alert(file.name + " is not an image");
+                                        }
+                                        var reader = new FileReader();
+                                        reader.addEventListener("load", function() {
+                                            var image = new Image();
+                                            image.height = 300;
+                                            image.width = 300;
+                                            image.title = file.name;
+                                            image.style = "border-radius: 10px; margin: 5px"    //image attributes
+                                            image.src = this.result;
+                                            preview.appendChild(image);
+                                        });
+                                        reader.readAsDataURL(file);
+                                    }
+                                }
+                                document.querySelector('#file-input').addEventListener("change", previewImages);
+                            </script>
+                      </div>       
                       <button type="submit" class="btn btn-success mr-2">Submit</button>
                       <button class="btn btn-light">Cancel</button>
                     </form>
